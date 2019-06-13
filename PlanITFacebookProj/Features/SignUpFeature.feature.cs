@@ -18,22 +18,22 @@ namespace PlanITFacebookProj.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("LoginFeature")]
+    [NUnit.Framework.DescriptionAttribute("SignUpFeature")]
     [NUnit.Framework.CategoryAttribute("chrome")]
-    public partial class LoginFeatureFeature
+    public partial class SignUpFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "LoginFeature.feature"
+#line 1 "SignUpFeature.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "LoginFeature", "\tIn order to only allow authenticated users to log in\r\n\tAs a tester\r\n\tI want to v" +
-                    "erify login feature", ProgrammingLanguage.CSharp, new string[] {
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SignUpFeature", "\tIn order to only register users for facebook\r\n\tAs a tester\r\n\tI want to verify si" +
+                    "gn up feature", ProgrammingLanguage.CSharp, new string[] {
                         "chrome"});
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -73,21 +73,32 @@ namespace PlanITFacebookProj.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Login")]
-        [NUnit.Framework.TestCaseAttribute("valid combination", "ss1444121@gmail.com", "ss@1984", "passed", null)]
-        [NUnit.Framework.TestCaseAttribute("invalid combination 1", "test", "test", "failed", null)]
-        public virtual void Login(string testing, string username, string password, string result, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Sign Up for facebook using random data")]
+        [NUnit.Framework.TestCaseAttribute("valid", null)]
+        public virtual void SignUpForFacebookUsingRandomData(string test, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login", null, exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sign Up for facebook using random data", null, exampleTags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 8
- testRunner.Given(string.Format("I have entered username \'{0}\' and password \'{1}\'", username, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I open Sign Up page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When("I login", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And(string.Format("I enter the randomly generated {0} firstname", test), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.Then(string.Format("I should be informed that login \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And(string.Format("I enter the randomly generated {0} surname", test), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+ testRunner.And(string.Format("I enter the randomly generated {0} email", test), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.And(string.Format("I enter the randomly generated {0} password", test), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.And(string.Format("I enter the randomly generated {0} birthday", test), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+ testRunner.And(string.Format("I enter the randomly generated {0} gender", test), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+ testRunner.When("I click on Sign Up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+ testRunner.Then("New user should be signed up successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

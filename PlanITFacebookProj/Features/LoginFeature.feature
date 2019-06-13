@@ -10,7 +10,7 @@ Scenario Outline: Login
 	Then I should be informed that login '<result>'
 
 	Examples: 
-	| testing               | username | password             | result   |
-	| valid combination     | sonal    | June19               | passed   |
-	| invalid combination 1 | test     | test                 | failed   |
-	| special characters    | $$$      | SuperSecretPassword! | failed   |
+	| testing               | username				 | password             | result   |
+	| valid combination     | ss1444121@gmail.com    | ss@1984               | passed   |
+	| invalid combination 1 | test					 | test                 | failed   |
+	#| special characters    | $$$      | SuperSecretPassword! | failed   |

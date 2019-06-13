@@ -1,0 +1,36 @@
+=> PlanITFacebookProj.Features.LoginFeatureFeature.Login("valid combination","ss1444121@gmail.com","ss@1984","passed",null)
+Given I have entered username 'ss1444121@gmail.com' and password 'ss@1984'
+-> done: LoginFeatureSteps.GivenIHaveEnteredUsernameAndPassword("ss1444121@gmail.com", "ss@1984") (5.6s)
+When I login
+-> done: LoginFeatureSteps.WhenILogin() (6.0s)
+Then I should be informed that login 'passed'
+-> done: LoginFeatureSteps.ThenIShouldBeInformedThatLogin("passed") (0.0s)
+=> PlanITFacebookProj.Features.LoginFeatureFeature.Login("invalid combination 1","test","test","failed",null)
+Given I have entered username 'test' and password 'test'
+-> done: LoginFeatureSteps.GivenIHaveEnteredUsernameAndPassword("test", "test") (4.4s)
+When I login
+-> done: LoginFeatureSteps.WhenILogin() (25.5s)
+Then I should be informed that login 'failed'
+-> done: LoginFeatureSteps.ThenIShouldBeInformedThatLogin("failed") (0.0s)
+=> PlanITFacebookProj.Features.LoginFeatureFeature
+-> Loading plugin D:\repo\PlanITFB\PlanITFacebookSolution\PlanITFacebookProj\bin\Debug\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+-> Using default config
+=> PlanITFacebookProj.Features.SignUpFeatureFeature.SignUpForFacebookUsingRandomData("valid",null)
+Given I open Sign Up page
+-> done: SignUpFeatureSteps.GivenIOpenSignUpPage() (4.4s)
+And I enter the randomly generated valid firstname
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedFirstname("valid") (0.1s)
+And I enter the randomly generated valid surname
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedSurname("valid") (0.1s)
+And I enter the randomly generated valid email
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedEmail("valid") (0.4s)
+And I enter the randomly generated valid password
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedPassword("valid") (0.1s)
+And I enter the randomly generated valid birthday
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedBirthday("valid") (0.5s)
+And I enter the randomly generated valid gender
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedGender("valid") (0.1s)
+When I click on Sign Up button
+-> done: SignUpFeatureSteps.WhenIClickOnSignUpButton() (9.0s)
+Then New user should be signed up successfully
+-> done: SignUpFeatureSteps.ThenNewUserShouldBeSignedUpSuccessfully() (0.0s)

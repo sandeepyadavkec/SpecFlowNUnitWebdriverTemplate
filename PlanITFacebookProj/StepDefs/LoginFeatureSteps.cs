@@ -30,10 +30,10 @@ namespace PlanITFacebookProj.StepDefs
             switch (loginStatus)
             {
                 case "passed":
-                    loginPage.successMessagePresent();
+                    loginPage.HomePageIsLoaded();
                     break;
                 case "failed":
-                    loginPage.failureMessagePresent();
+                    loginPage.StillOnLoginPage();
                     break;
             }
         }

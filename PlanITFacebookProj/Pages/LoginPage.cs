@@ -11,10 +11,9 @@ namespace PlanITFacebookProj.Pages
 {
     class LoginPage : BasePage
     {
-        By usernameField = By.Id("txtLogin");
-        By passwordField = By.Id("txtPassword");
-        By loginButton = By.Id("btnLogin");
-        By successMessageLocator = By.Id("header");
+        By usernameField = By.Id("email");
+        By passwordField = By.Id("pass");
+        By loginButton = By.XPath("//input[@value='Log In']");
 
 
         public LoginPage()
@@ -23,7 +22,7 @@ namespace PlanITFacebookProj.Pages
 
         public void with(String username, String password)
         {
-            visit("LoginURL");
+            visit("baseURL");
             type(username, usernameField);
             type(password, passwordField);
         }
@@ -33,14 +32,14 @@ namespace PlanITFacebookProj.Pages
             click(loginButton);
         }
 
-        public void successMessagePresent()
+        internal void HomePageIsLoaded()
         {
-            Assert.True(isDisplayed(successMessageLocator));
+            Assert.IsTrue(GetDriver().Title.Equals("Facebook"));
         }
 
-        public void failureMessagePresent()
+        internal void StillOnLoginPage()
         {
-            Assert.False(isDisplayed(successMessageLocator));
+            Assert.IsTrue(GetDriver().Title.Contains("Log in"));
         }
     }
 }

@@ -121,11 +121,10 @@ namespace PlanITFacebookProj.Pages
         }
 
 
-        public void SelectDropdownByText(string textToSelect, By locator)
+        public void SelectDropdownByValue(string valueToSelect, IWebElement element)
         {
-            IWebElement elementDropdownList = driver.FindElement(locator);
-            var selectElement = new SelectElement(elementDropdownList);
-            selectElement.SelectByText(textToSelect);
+            var selectElement = new SelectElement(element);
+            selectElement.SelectByValue(valueToSelect);
         }
 
         public void submit(By locator)
@@ -135,13 +134,34 @@ namespace PlanITFacebookProj.Pages
 
         public static string GenerateRandomString(int length, Random random)
         {
-            string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            string characters = "bcdefghijklmnopqrstuvwxyz";
+            char newChar;
             StringBuilder result = new StringBuilder(length);
-            for (int i = 0; i < length; i++)
+            newChar = characters[random.Next(characters.Length)];
+            result.Append(newChar);
+            for (int i = 0; i < length-1; i++)
             {
-                result.Append(characters[random.Next(characters.Length)]);
+                newChar = characters[random.Next(characters.Length)];
+                while (result.ToString().Contains(newChar)) 
+                {
+                    newChar = characters[random.Next(characters.Length)];
+                }
+                result.Append(newChar);
             }
             return result.ToString();
+        }
+
+        public void HandleAlert()
+        {
+            try
+            {
+                IAlert alert = driver.SwitchTo().Alert();
+                alert.Dismiss();
+            }
+            catch (NoAlertPresentException ex)
+            {
+
+            }
         }
     }
 }

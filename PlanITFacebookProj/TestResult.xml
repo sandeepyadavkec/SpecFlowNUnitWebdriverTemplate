@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="3" engine-version="3.10.0.0" clr-version="4.0.30319.42000" start-time="2019-06-13 20:51:39Z" end-time="2019-06-13 20:52:58Z" duration="79.013688">
+  <command-line><![CDATA[.\packages\nunit.consolerunner\3.10.0\tools\nunit3-console  PlanITFacebookProj\bin\Debug\PlanITFacebookProj.dll --labels=On --out=PlanITFacebookProj\TestResult.txt --result=PlanITFacebookProj\TestResult.xml ]]></command-line>
+  <test-suite type="Assembly" id="0-1007" name="PlanITFacebookProj.dll" fullname="D:\repo\PlanITFB\PlanITFacebookSolution\PlanITFacebookProj\bin\Debug\PlanITFacebookProj.dll" runstate="Runnable" testcasecount="3" result="Passed" start-time="2019-06-13 20:51:41Z" end-time="2019-06-13 20:52:58Z" duration="77.362132" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+    <environment framework-version="3.10.0.0" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.1.7601.65536" platform="Win32NT" cwd="D:\repo\PlanITFB\PlanITFacebookSolution" machine-name="AAIWKLT020408" user="AADM346" user-domain="AIA" culture="en-AU" uiculture="en-US" os-architecture="x64" />
+    <settings>
+      <setting name="DisposeRunners" value="True" />
+      <setting name="WorkDirectory" value="D:\repo\PlanITFB\PlanITFacebookSolution" />
+      <setting name="ImageRuntimeVersion" value="4.0.30319" />
+      <setting name="ImageTargetFrameworkName" value=".NETFramework,Version=v4.7.2" />
+      <setting name="ImageRequiresX86" value="False" />
+      <setting name="ImageRequiresDefaultAppDomainAssemblyResolver" value="False" />
+      <setting name="NumberOfTestWorkers" value="8" />
+    </settings>
+    <properties>
+      <property name="_PID" value="14504" />
+      <property name="_APPDOMAIN" value="domain-" />
+    </properties>
+    <test-suite type="TestSuite" id="0-1008" name="PlanITFacebookProj" fullname="PlanITFacebookProj" runstate="Runnable" testcasecount="3" result="Passed" start-time="2019-06-13 20:51:41Z" end-time="2019-06-13 20:52:58Z" duration="77.334574" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+      <test-suite type="TestSuite" id="0-1009" name="Features" fullname="PlanITFacebookProj.Features" runstate="Runnable" testcasecount="3" result="Passed" start-time="2019-06-13 20:51:41Z" end-time="2019-06-13 20:52:58Z" duration="77.333125" total="3" passed="3" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="3">
+        <test-suite type="TestFixture" id="0-1000" name="LoginFeatureFeature" fullname="PlanITFacebookProj.Features.LoginFeatureFeature" classname="PlanITFacebookProj.Features.LoginFeatureFeature" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-06-13 20:51:41Z" end-time="2019-06-13 20:52:37Z" duration="56.451683" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+          <properties>
+            <property name="Description" value="LoginFeature" />
+            <property name="Category" value="chrome" />
+          </properties>
+          <output><![CDATA[-> Loading plugin D:\repo\PlanITFB\PlanITFacebookSolution\PlanITFacebookProj\bin\Debug\TechTalk.SpecFlow.NUnit.SpecFlowPlugin.dll
+-> Using default config
+]]></output>
+          <test-suite type="ParameterizedMethod" id="0-1003" name="Login" fullname="PlanITFacebookProj.Features.LoginFeatureFeature.Login" classname="PlanITFacebookProj.Features.LoginFeatureFeature" runstate="Runnable" testcasecount="2" result="Passed" start-time="2019-06-13 20:51:42Z" end-time="2019-06-13 20:52:37Z" duration="55.713387" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+            <properties>
+              <property name="Description" value="Login" />
+            </properties>
+            <test-case id="0-1001" name="Login(&quot;valid combination&quot;,&quot;ss1444121@gmail.com&quot;,&quot;ss@1984&quot;,&quot;passed&quot;,null)" fullname="PlanITFacebookProj.Features.LoginFeatureFeature.Login(&quot;valid combination&quot;,&quot;ss1444121@gmail.com&quot;,&quot;ss@1984&quot;,&quot;passed&quot;,null)" methodname="Login" classname="PlanITFacebookProj.Features.LoginFeatureFeature" runstate="Runnable" seed="2079295265" result="Passed" start-time="2019-06-13 20:51:42Z" end-time="2019-06-13 20:52:02Z" duration="20.276218" asserts="1">
+              <output><![CDATA[Given I have entered username 'ss1444121@gmail.com' and password 'ss@1984'
+-> done: LoginFeatureSteps.GivenIHaveEnteredUsernameAndPassword("ss1444121@gmail.com", "ss@1984") (5.6s)
+When I login
+-> done: LoginFeatureSteps.WhenILogin() (6.0s)
+Then I should be informed that login 'passed'
+-> done: LoginFeatureSteps.ThenIShouldBeInformedThatLogin("passed") (0.0s)
+]]></output>
+            </test-case>
+            <test-case id="0-1002" name="Login(&quot;invalid combination 1&quot;,&quot;test&quot;,&quot;test&quot;,&quot;failed&quot;,null)" fullname="PlanITFacebookProj.Features.LoginFeatureFeature.Login(&quot;invalid combination 1&quot;,&quot;test&quot;,&quot;test&quot;,&quot;failed&quot;,null)" methodname="Login" classname="PlanITFacebookProj.Features.LoginFeatureFeature" runstate="Runnable" seed="1778810520" result="Passed" start-time="2019-06-13 20:52:02Z" end-time="2019-06-13 20:52:37Z" duration="35.424272" asserts="1">
+              <output><![CDATA[Given I have entered username 'test' and password 'test'
+-> done: LoginFeatureSteps.GivenIHaveEnteredUsernameAndPassword("test", "test") (4.4s)
+When I login
+-> done: LoginFeatureSteps.WhenILogin() (25.5s)
+Then I should be informed that login 'failed'
+-> done: LoginFeatureSteps.ThenIShouldBeInformedThatLogin("failed") (0.0s)
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+        <test-suite type="TestFixture" id="0-1004" name="SignUpFeatureFeature" fullname="PlanITFacebookProj.Features.SignUpFeatureFeature" classname="PlanITFacebookProj.Features.SignUpFeatureFeature" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-06-13 20:52:37Z" end-time="2019-06-13 20:52:58Z" duration="20.869840" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+          <properties>
+            <property name="Description" value="SignUpFeature" />
+            <property name="Category" value="chrome" />
+          </properties>
+          <test-suite type="ParameterizedMethod" id="0-1006" name="SignUpForFacebookUsingRandomData" fullname="PlanITFacebookProj.Features.SignUpFeatureFeature.SignUpForFacebookUsingRandomData" classname="PlanITFacebookProj.Features.SignUpFeatureFeature" runstate="Runnable" testcasecount="1" result="Passed" start-time="2019-06-13 20:52:37Z" end-time="2019-06-13 20:52:58Z" duration="20.859048" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+            <properties>
+              <property name="Description" value="Sign Up for facebook using random data" />
+            </properties>
+            <test-case id="0-1005" name="SignUpForFacebookUsingRandomData(&quot;valid&quot;,null)" fullname="PlanITFacebookProj.Features.SignUpFeatureFeature.SignUpForFacebookUsingRandomData(&quot;valid&quot;,null)" methodname="SignUpForFacebookUsingRandomData" classname="PlanITFacebookProj.Features.SignUpFeatureFeature" runstate="Runnable" seed="179474865" result="Passed" start-time="2019-06-13 20:52:37Z" end-time="2019-06-13 20:52:58Z" duration="20.857725" asserts="1">
+              <output><![CDATA[Given I open Sign Up page
+-> done: SignUpFeatureSteps.GivenIOpenSignUpPage() (4.4s)
+And I enter the randomly generated valid firstname
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedFirstname("valid") (0.1s)
+And I enter the randomly generated valid surname
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedSurname("valid") (0.1s)
+And I enter the randomly generated valid email
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedEmail("valid") (0.4s)
+And I enter the randomly generated valid password
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedPassword("valid") (0.1s)
+And I enter the randomly generated valid birthday
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedBirthday("valid") (0.5s)
+And I enter the randomly generated valid gender
+-> done: SignUpFeatureSteps.GivenIEnterTheRandomlyGeneratedGender("valid") (0.1s)
+When I click on Sign Up button
+-> done: SignUpFeatureSteps.WhenIClickOnSignUpButton() (9.0s)
+Then New user should be signed up successfully
+-> done: SignUpFeatureSteps.ThenNewUserShouldBeSignedUpSuccessfully() (0.0s)
+]]></output>
+            </test-case>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>
